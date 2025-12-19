@@ -2,11 +2,24 @@
 
 <router-outlet /> -->
 
-<div class="h-screen w-screen flex ">
+<div class="w-screen flex justify-start items-center gap-2 px-4 h-[48px]">
+  <div>
+    <img  src="logo1.svg" alt="">
+  </div>
+  <div>
+    <div class="text-base font-semibold">FixMy<span class="text-[#F5702F]">JSON</span></div>
+    <div class="text-xs">Validate, format, and fix broken <span class="text-[#329253]">JSON</span> instantly</div>
+  </div>
+</div>
+<div class="h-[calc(100vh-48px)] w-screen flex">
   <div class="w-1/2 border-r p-4">
-    <app-input-editor-section></app-input-editor-section>
+    <app-input-editor-section
+      (jsonValidated)="onJsonValidated($event)"
+    ></app-input-editor-section>
   </div>
   <div class="w-1/2 border-r p-4">
-    <app-output-viewer-section></app-output-viewer-section>
+    <app-output-viewer-section
+      [result]="validationResult"
+    ></app-output-viewer-section>
   </div>
 </div>
