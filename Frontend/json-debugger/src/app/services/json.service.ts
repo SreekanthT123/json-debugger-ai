@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class JsonService {
-  private API_URL = 'http://localhost:5000/api/json';
+  private API_URL = 'https://fixmyjson-backend.onrender.com/api/json';
 
   constructor(private http: HttpClient) {}
 
